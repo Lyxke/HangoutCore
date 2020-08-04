@@ -2,6 +2,7 @@ package io.github.lyxke.hangoutcore;
 
 import fr.minuskube.inv.InventoryManager;
 import io.github.lyxke.hangoutcore.commands.SettingsCommand;
+import io.github.lyxke.hangoutcore.events.HungerDamageCheck;
 import io.github.lyxke.hangoutcore.events.PlayerHungerDamage;
 import io.github.lyxke.hangoutcore.events.PlayerWelcomeMessage;
 import org.bukkit.event.Listener;
@@ -17,6 +18,7 @@ public class main extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new PlayerWelcomeMessage(), this);
         getServer().getPluginManager().registerEvents(new PlayerHungerDamage(), this);
         getServer().getPluginManager().registerEvents(new SettingsCommand(), this);
+        getServer().getPluginManager().registerEvents(new HungerDamageCheck(), this);
 
         getCommand("settings").setExecutor(new SettingsCommand());
     }
