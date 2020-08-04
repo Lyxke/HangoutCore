@@ -60,19 +60,19 @@ public class main extends JavaPlugin implements Listener {
     @EventHandler
     public void playerHungerDamage(FoodLevelChangeEvent e){
 
+        e.setCancelled(true);
+
         // Set the player as the entity involved
         Player player = (Player) e.getEntity();
 
         if (e.getFoodLevel() <= 0) {
             while(player.getHealth() > .5){
-                for(int i = 0; i < 20; i++){
-                    try {
-                        TimeUnit.SECONDS.sleep(4);
-                    } catch (InterruptedException ex) {
-                        ex.printStackTrace();
-                    }
-                    player.setHealth(player.getHealth() - .5);
+                try {
+                    TimeUnit.SECONDS.sleep(4);
+                } catch (InterruptedException ex) {
+                    ex.printStackTrace();
                 }
+                player.setHealth(player.getHealth() - .5);
             }
         }
     }
