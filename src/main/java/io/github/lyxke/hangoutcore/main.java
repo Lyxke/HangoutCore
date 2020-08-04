@@ -58,12 +58,14 @@ public class main extends JavaPlugin implements Listener {
 
     // Simulate Hard hunger mechanic on any other modes
     @EventHandler
-    public void playerHungerDamage(FoodLevelChangeEvent e){
-
-        e.setCancelled(true);
+    public void playerHungerDamage(FoodLevelChangeEvent e, EntityDamageEvent d){
 
         // Set the player as the entity involved
         Player player = (Player) e.getEntity();
+
+        if(d.getCause() == EntityDamageEvent.DamageCause.STARVATION){
+            d.setCancelled(true);
+        }
 
         if (e.getFoodLevel() <= 0) {
             while(player.getHealth() > .5){
