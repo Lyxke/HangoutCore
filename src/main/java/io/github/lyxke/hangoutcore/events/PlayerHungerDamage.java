@@ -23,13 +23,14 @@ public class PlayerHungerDamage implements Listener {
          until they eat or reach .5 total health
          */
         if (player.getFoodLevel() <= 0) {
-            while(player.getHealth() > .5){
+            while(e.getEntity().getHealth() > .5){
                 try {
                     TimeUnit.SECONDS.sleep(4);
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
                 }
-                player.setHealth(player.getHealth() - .5);
+                e.getEntity().setHealth(e.getEntity().getHealth() - .5);
+
             }
         }
     }
