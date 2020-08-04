@@ -16,23 +16,28 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
+import java.util.Arrays;
 
-public class SettingsCommand implements CommandExecutor, InventoryProvider, Listener {
+
+public class SettingsCommand implements CommandExecutor, Listener {
 
     private PlayerDeathEvent de;
 
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
+    Inventory settingsInventory;
+
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
         Player player = (Player) sender;
-        INVENTORY.open(player);
 
         return false;
     }
 
-    public static final SmartInventory INVENTORY = SmartInventory.builder()
+/*    public static final SmartInventory INVENTORY = SmartInventory.builder()
             .id("settingsMenu")
             .provider(new SettingsCommand())
             .size(4, 9)
@@ -74,4 +79,6 @@ public class SettingsCommand implements CommandExecutor, InventoryProvider, List
     public void update(Player player, InventoryContents inventoryContents) {
 
     }
+
+*/
 }
