@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class PlayerHungerDamage implements Listener {
 
+
     // Simulate Normal hunger mechanic on any other modes
     @EventHandler
     public void playerHungerDamage(FoodLevelChangeEvent e){

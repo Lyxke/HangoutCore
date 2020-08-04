@@ -6,7 +6,6 @@ load: POSTWORLD
 author: Hangout Dev Team
 website: https://github.com/Lyxke/HangoutCore
 prefix: "[HangoutCore]"
-depend: [SmartInvs]
 commands:
   settings:
     description: Check out your settings!
@@ -14,10 +13,18 @@ commands:
     permission: hangout.player.settings
     permission-message: You do not have permission!
     usage: /settings
+  hunger:
+    description: Test Your Hunger!
+    aliases: {}
+    permission: hangout.player.hunger
+    permission-message: You do not have permission!
+    usage: /hunger
 api-version: 1.16
 permissions:
   hangout.player.*:
     children:
       hangout.player.settings: true
+      hangout.player.hunger: true
   hangout.player.settings:
     description: ""
+  hangout.player.hunger:

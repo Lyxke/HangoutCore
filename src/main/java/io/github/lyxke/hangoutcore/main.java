@@ -1,6 +1,7 @@
 package io.github.lyxke.hangoutcore;
 
 import fr.minuskube.inv.InventoryManager;
+import io.github.lyxke.hangoutcore.commands.HungerCommand;
 import io.github.lyxke.hangoutcore.commands.SettingsCommand;
 import io.github.lyxke.hangoutcore.events.HungerDamageCheck;
 import io.github.lyxke.hangoutcore.events.PlayerHungerDamage;
@@ -21,6 +22,7 @@ public class main extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new HungerDamageCheck(), this);
 
         getCommand("settings").setExecutor(new SettingsCommand());
+        getCommand("hunger").setExecutor(new HungerCommand());
     }
 
     @Override
