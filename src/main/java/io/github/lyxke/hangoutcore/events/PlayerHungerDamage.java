@@ -12,7 +12,13 @@ import java.util.concurrent.TimeUnit;
 
 public class PlayerHungerDamage implements Listener {
 
-    EntityDamageEvent d;
+    @EventHandler
+    //Cancel out vanilla hunger damage mechanic
+    public void playerDamageCheck(EntityDamageEvent e){
+        if(e.getCause() == EntityDamageEvent.DamageCause.STARVATION){
+            e.setCancelled(true);
+        }
+    }
 
     // Simulate Normal hunger mechanic on any other modes
     @EventHandler
@@ -20,11 +26,6 @@ public class PlayerHungerDamage implements Listener {
 
         // Set the player as the entity involved
         Player player = (Player) e.getEntity();
-
-        //Cancel out vanilla hunger damage mechanic
-        if(d.getCause() == EntityDamageEvent.DamageCause.STARVATION){
-            d.setCancelled(true);
-        }
 
         /*
          If food level is less than or at 0,
