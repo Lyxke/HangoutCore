@@ -1,0 +1,22 @@
+main: io.github.lyxke.hangoutcore.main
+name: HangoutCore
+version: '1.0'
+description: The Core of the Hangout
+load: STARTUP
+author: Hangout Dev Team
+website: https://github.com/Lyxke/HangoutCore
+prefix: "[HangoutCore]"
+commands:
+  settings:
+    description: Check out your settings!
+    aliases: {}
+    permission: hangout.player.settings
+    permission-message: You do not have permission!
+    usage: /settings
+api-version: 1.16
+permissions:
+  hangout.player.*:
+    children:
+      hangout.player.settings: true
+  hangout.player.settings:
+    description: ""
