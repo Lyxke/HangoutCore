@@ -1,5 +1,6 @@
 package io.github.lyxke.hangoutcore;
 
+import fr.minuskube.inv.InventoryManager;
 import io.github.lyxke.hangoutcore.commands.SettingsCommand;
 import io.github.lyxke.hangoutcore.events.PlayerHungerDamage;
 import io.github.lyxke.hangoutcore.events.PlayerWelcomeMessage;
@@ -12,6 +13,7 @@ public class main extends JavaPlugin implements Listener {
     @Override
     public void onEnable(){
         System.out.println("[HangoutCore] » Plugin has started!");
+
         getServer().getPluginManager().registerEvents(new PlayerWelcomeMessage(), this);
         getServer().getPluginManager().registerEvents(new PlayerHungerDamage(), this);
         getServer().getPluginManager().registerEvents(new SettingsCommand(), this);

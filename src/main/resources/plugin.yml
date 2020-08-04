@@ -2,10 +2,11 @@ main: io.github.lyxke.hangoutcore.main
 name: HangoutCore
 version: '1.0'
 description: The Core of the Hangout
-load: STARTUP
+load: POSTWORLD
 author: Hangout Dev Team
 website: https://github.com/Lyxke/HangoutCore
 prefix: "[HangoutCore]"
+depend: [SmartInvs]
 commands:
   settings:
     description: Check out your settings!

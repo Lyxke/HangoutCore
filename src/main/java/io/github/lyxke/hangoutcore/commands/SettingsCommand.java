@@ -1,9 +1,11 @@
 package io.github.lyxke.hangoutcore.commands;
 
 import fr.minuskube.inv.ClickableItem;
+import fr.minuskube.inv.InventoryManager;
 import fr.minuskube.inv.SmartInventory;
 import fr.minuskube.inv.content.InventoryContents;
 import fr.minuskube.inv.content.InventoryProvider;
+import io.github.lyxke.hangoutcore.main;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -38,6 +40,7 @@ public class SettingsCommand implements CommandExecutor, InventoryProvider, List
             .build();
 
     public void init(Player player, InventoryContents inventoryContents) {
+
         ItemStack playerSkull = new ItemStack(Material.PLAYER_HEAD,1);
 
         SkullMeta meta = (SkullMeta) playerSkull.getItemMeta();
