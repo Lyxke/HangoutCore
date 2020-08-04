@@ -12,9 +12,11 @@ import java.util.concurrent.TimeUnit;
 
 public class PlayerHungerDamage implements Listener {
 
+    EntityDamageEvent d;
+
     // Simulate Normal hunger mechanic on any other modes
     @EventHandler
-    public void playerHungerDamage(FoodLevelChangeEvent e, EntityDamageEvent d){
+    public void playerHungerDamage(FoodLevelChangeEvent e){
 
         // Set the player as the entity involved
         Player player = (Player) e.getEntity();
