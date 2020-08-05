@@ -26,12 +26,13 @@ public class HungerDamageCheck implements Listener {
             if (player.getFoodLevel() <= 0) {
                 try {
                     TimeUnit.SECONDS.sleep(4);
+                    while(player.getHealth() > 1){
+                        player.setHealth(player.getHealth() - 1);
+                    }
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
                 }
-                while(player.getHealth() > 1){
-                    player.setHealth(player.getHealth() - 1);
-                }
+
             }
 
         }
