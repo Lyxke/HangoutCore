@@ -14,20 +14,20 @@ public class PlayerHungerDamage implements Listener {
     @EventHandler
     public void playerHungerDamage(FoodLevelChangeEvent e){
 
-        // Set the player as the entity involved
-        Player player = (Player) e.getEntity();
+       // Set the player as the entity involved
+//        Player player = (Player) e.getEntity();
 
         /*
          If food level is less than or at 0,
          damage the player every 4 seconds by .5 hearts
          until they eat or reach .5 total health
          */
-       if (player.getFoodLevel() <= 0) {
+/*       if (player.getFoodLevel() <= 0) {
             while(e.getEntity().getHealth() > 1){
 
                 player.setHealth(player.getHealth() - 1);
             }
-        }
+        }*/
     }
 
 }

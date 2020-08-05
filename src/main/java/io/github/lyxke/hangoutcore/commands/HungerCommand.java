@@ -11,7 +11,7 @@ public class HungerCommand implements CommandExecutor {
 
         Player player = (Player) sender;
 
-        player.setFoodLevel(1);
+        player.setFoodLevel(0);
 
         return true;
     }
