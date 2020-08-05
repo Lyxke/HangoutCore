@@ -23,16 +23,16 @@ public class HungerDamageCheck implements Listener {
              damage the player every 4 seconds by .5 hearts
              until they eat or reach .5 total health
              */
-            if (player.getFoodLevel() <= 0) {
+            //Check player health is above 1 and empty food level
+            while(player.getHealth() > 1 && player.getFoodLevel() <= 0){
+                //try to sleep for 4 seconds followed by health deduction
                 try {
                     TimeUnit.SECONDS.sleep(4);
-                    while(player.getHealth() > 1){
-                        player.setHealth(player.getHealth() - 1);
-                    }
+                    player.setHealth(player.getHealth() - 1);
+                    //If error occurred or interrupted go to catch
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
                 }
-
             }
 
         }
