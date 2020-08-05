@@ -22,13 +22,9 @@ public class PlayerHungerDamage implements Listener {
          damage the player every 4 seconds by .5 hearts
          until they eat or reach .5 total health
          */
-        if (player.getFoodLevel() <= 0) {
+       if (player.getFoodLevel() <= 0) {
             while(e.getEntity().getHealth() > 1){
-                try {
-                    TimeUnit.SECONDS.sleep(4);
-                } catch (InterruptedException ex) {
-                    ex.printStackTrace();
-                }
+
                 player.setHealth(player.getHealth() - 1);
             }
         }
