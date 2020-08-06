@@ -5,6 +5,7 @@ import io.github.lyxke.hangoutcore.commands.SettingsCommand;
 import io.github.lyxke.hangoutcore.events.HungerDamageCheck;
 import io.github.lyxke.hangoutcore.events.PlayerHungerDamage;
 import io.github.lyxke.hangoutcore.events.PlayerWelcomeMessage;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -46,28 +47,26 @@ public class main extends JavaPlugin implements Listener {
 
     @EventHandler
     //Cancel out vanilla hunger damage mechanic
-    public void playerDamageCheck(EntityDamageEvent e){
+    public void playerDamageCheck(EntityDamageEvent e) {
 
-        if(e.getCause() == EntityDamageEvent.DamageCause.STARVATION){
+        if (e.getCause() == EntityDamageEvent.DamageCause.STARVATION) {
 
             e.setCancelled(true);
 
-            BukkitTask task = new BukkitRunnable() {
-                public void run() {
-
-                    // Set the player as the entity involved
-                    Player player = (Player) e.getEntity();
+            // Set the player as the entity involved
+            Player player = (Player) e.getEntity();
                     /*
                     If food level is less than or at 0,
                      damage the player every 4 seconds by .5 hearts
                      until they eat or reach .5 total health
                      */
-                    //Check player health is above 1 and empty food level
-                    while(player.getHealth() > 1 && player.getFoodLevel() <= 0){
-                        player.setHealth(player.getHealth() - 1);
-                    }
-                }
-            }.runTaskTimer(this,0,80L);
+            //Check player health is above 1 and empty food level
+            while (player.getHealth() > 1 && player.getFoodLevel() <= 0) {
+                Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, () ->
+                        player.setHealth(player.getHealth() - 1), 80);
+
+            }
+
         }
     }
 
