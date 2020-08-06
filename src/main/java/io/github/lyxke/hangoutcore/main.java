@@ -5,6 +5,7 @@ import io.github.lyxke.hangoutcore.commands.SettingsCommand;
 import io.github.lyxke.hangoutcore.events.HungerDamageCheck;
 import io.github.lyxke.hangoutcore.events.PlayerHungerDamage;
 import io.github.lyxke.hangoutcore.events.PlayerWelcomeMessage;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
