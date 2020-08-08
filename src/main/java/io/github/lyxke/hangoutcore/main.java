@@ -3,6 +3,7 @@ package io.github.lyxke.hangoutcore;
 import io.github.lyxke.hangoutcore.commands.HungerCommand;
 import io.github.lyxke.hangoutcore.commands.SettingsCommand;
 import io.github.lyxke.hangoutcore.events.HungerDamageCheck;
+import io.github.lyxke.hangoutcore.events.MenuHandler;
 import io.github.lyxke.hangoutcore.events.PlayerHungerDamage;
 import io.github.lyxke.hangoutcore.events.PlayerWelcomeMessage;
 import org.bukkit.Bukkit;
@@ -26,6 +27,7 @@ public class main extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new SettingsCommand(), this);
         getServer().getPluginManager().registerEvents(new HungerDamageCheck(), this);
         getServer().getPluginManager().registerEvents(this, this);
+        getServer().getPluginManager().registerEvents(new MenuHandler(), this);
 
         getCommand("settings").setExecutor(new SettingsCommand());
         getCommand("hunger").setExecutor(new HungerCommand());
