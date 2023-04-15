@@ -1,13 +1,9 @@
-package io.github.lyxke.hangoutcore.events;
+package xyz.lyxke.hangoutcore.events;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
-import org.bukkit.scheduler.BukkitRunnable;
-
-import io.github.lyxke.hangoutcore.main;
-import org.bukkit.scheduler.BukkitTask;
 
 import java.util.HashMap;
 import java.util.Map;

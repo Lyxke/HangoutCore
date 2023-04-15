@@ -1,4 +1,4 @@
-package io.github.lyxke.hangoutcore.commands;
+package xyz.lyxke.hangoutcore.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

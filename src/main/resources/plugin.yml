@@ -1,4 +1,4 @@
-main: io.github.lyxke.hangoutcore.main
+main: xyz.lyxke.hangoutcore.main
 name: HangoutCore
 version: '1.0'
 description: The Core of the Hangout

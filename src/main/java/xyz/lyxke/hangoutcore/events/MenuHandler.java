@@ -1,13 +1,12 @@
-package io.github.lyxke.hangoutcore.events;
+package xyz.lyxke.hangoutcore.events;
 
-import io.github.lyxke.hangoutcore.commands.SettingsCommand;
+import xyz.lyxke.hangoutcore.commands.SettingsCommand;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.inventory.meta.ItemMeta;
 
 
 public class MenuHandler implements Listener {

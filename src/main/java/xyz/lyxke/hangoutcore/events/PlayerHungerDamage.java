@@ -1,4 +1,4 @@
-package io.github.lyxke.hangoutcore.events;
+package xyz.lyxke.hangoutcore.events;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

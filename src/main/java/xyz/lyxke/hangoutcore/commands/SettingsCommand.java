@@ -1,19 +1,11 @@
-package io.github.lyxke.hangoutcore.commands;
+package xyz.lyxke.hangoutcore.commands;
 
-import fr.minuskube.inv.ClickableItem;
-import fr.minuskube.inv.InventoryManager;
-import fr.minuskube.inv.SmartInventory;
-import fr.minuskube.inv.content.InventoryContents;
-import fr.minuskube.inv.content.InventoryProvider;
-import io.github.lyxke.hangoutcore.main;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
